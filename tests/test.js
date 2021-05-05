@@ -5,7 +5,7 @@ extend("array", "string"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
 
 // New functions
-console.log('"test1" => ' + '"test2"'.stripEndQuotes()); // =>
+console.log('"test1" => ' + '"test2"'.stripEndQuotes()); // => test2
 console.log("'differentQuotes\" => " + "'differentQuotes\"".stripEndQuotes());
 
 console.log("Some string".pad(20, "=")); // => ====Some string=====

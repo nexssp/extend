@@ -4,6 +4,12 @@ Some functions written/re-written and/or collected to make things easier in Java
 
 **WIP..**
 
+## NEW
+
+### Strings
+
+- **StripEndQuotes()** - "test1" => test2
+
 ## Strings
 
 ```js
@@ -15,6 +21,7 @@ console.log(`All libs: `, extend.libs); // list available extensions
 
 // or just require("@nexssp/extend")("array")
 
+'"test2"'.stripEndQuotes(); // => test2
 "Some string".pad(20, "="); // => ====Some string=====
 "abc def".similarity("abc deg"); // => 85.71428571428571
 "this is a test".camelCase(); // => This is a test
