@@ -1,0 +1,43 @@
+{
+  "name": "@nexssp/extend",
+  "description": "Extend some standard functionality of JavaScript: Arrays, Strings..",
+  "version": "1.0.1",
+  "homepage": "https://nexss.com",
+  "main": "src/extend.js",
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "prepare-later": "npm run nexss:build",
+    "nexss:build": "npx @nexssp/min@1.0.6",
+    "nexss:clean": ""
+  },
+  "author": {
+    "name": "Marcin Polak",
+    "email": "mapoart@gmail.com",
+    "url": "https://nexss.com"
+  },
+  "keywords": [
+    "extend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nexssp/extend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nexssp/extend/issues",
+    "email": "mapoart@gmail.com"
+  },
+  "license": "MIT",
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/paypalme/mapoart"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/nexssp/cli?sponsor=1"
+    }
+  ],
+  "dependencies": {}
+}
