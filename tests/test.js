@@ -1,6 +1,9 @@
-require("../");
+const extend = require("../");
 
-console.log("Strings..");
+extend(); // load all extensions
+extend("array", "string"); // load selected extension
+console.log(`All libs: `, extend.libs); // list available extensions
+
 console.log("Some string".pad(20, "=")); // => ====Some string=====
 console.log("abc def".similarity("abc deg")); // => 85.71428571428571
 console.log("this is a test".camelCase()); // => This is a test
@@ -21,6 +24,7 @@ console.log(
     [1, 2],
     [3, 4],
   ].flat()
-); // =>  [ 1, 2, [ 5, 2, [ 6 ] ] ]
-console.log([1, [2, [5, 2], [6]]].flat()); // =>  [ 1, 2, [ 5, 2, [ 6 ] ] ]
+); // =>  [ 1, 2, 3, 4 ]
+console.log([1, [2, [5, 2], [6]]].flat()); // =>  [ 1, 2, [ 5, 2 ], [ 6 ] ]
 console.log([1, [2, [5, 2, [6]]]].flat().flat()); // => [ 1, 2, 5, 2, [ 6 ] ]
+console.log([1, [2, [5, 2, [6]]]].flat().flat().flat()); // => [ 1, 2, 5, 2, 6 ]

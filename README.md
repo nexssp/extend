@@ -2,11 +2,19 @@
 
 Some functions written/re-written and/or collected to make things easier in JavaScript and NodeJS.
 
-WIP..
+**WIP..**
 
 ## Strings
 
 ```js
+const extend = require("@nexssp/extend");
+
+extend(); // load all extensions
+extend("array", "string"); // load selected extension
+console.log(`All libs: `, extend.libs); // list available extensions
+
+// or just require("@nexssp/extend")("array")
+
 "Some string".pad(20, "="); // => ====Some string=====
 "abc def".similarity("abc deg"); // => 85.71428571428571
 "this is a test".camelCase(); // => This is a test
@@ -19,8 +27,9 @@ WIP..
 ## Arrays
 
 ```js
-["my val1", "my second val", "and another val"].remove("my second val"); // => [ 'my val1', 'and another val' ]
-[[1, 2], [3, 4]].flat(); // =>  [ 1, 2, [ 5, 2, [ 6 ] ] ]
+["my val1", "my second val",
+"and another val"].remove("my second val"); // => [ 'my val1', 'and another val' ]
+[[1, 2], [3, 4]].flat(); // =>  [ 1, 2, 3, 4 ]
 [1, [2, [5, 2], [6]]].flat(); // =>  [ 1, 2, [ 5, 2 ], [ 6 ] ]
 [1, [2, [5, 2, [6]]].flat().flat(); // => [ 1, 2, 5, 2, [ 6 ] ]
 
