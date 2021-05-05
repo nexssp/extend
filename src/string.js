@@ -28,3 +28,7 @@ String.prototype.camelCase = function () {
   var result = this.replace(/([A-Z])/g, " $1");
   return result.charAt(0).toUpperCase() + result.slice(1);
 };
+
+String.prototype.stripEndQuotes = function () {
+  return this.replace(/(^["|'])|(["|']$)/g, "");
+};
