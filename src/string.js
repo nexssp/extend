@@ -32,3 +32,11 @@ String.prototype.camelCase = function () {
 String.prototype.stripEndQuotes = function () {
   return this.replace(/(^["|'])|(["|']$)/g, "");
 };
+
+// Handy with striping arguments like --nexssProgrammer="x,y,=,z'" => --nexssProgrammer="x,y,=,z'"
+// Below function is based on https://stackoverflow.com/questions/19156148/i-want-to-remove-double-quotes-from-a-string
+// I have added striping of second char '
+String.prototype.argStripQuotes = function () {
+  // " & '
+  return this.replace(/"([^"]+(?="))"/g, "$1").replace(/'([^']+(?='))'/g, "$1");
+};

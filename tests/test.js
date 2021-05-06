@@ -5,9 +5,19 @@ extend("array", "string"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
 
 // New functions
+console.log(
+  [
+    "myparam1='test1'",
+    'myparam2="test2"',
+    'someadvanced="sd asd asd asd=,$$$=!"',
+    '"Nexss Programmer"="test more adv"',
+  ].argStripQuotes()
+);
+
 console.log('"test1" => ' + '"test2"'.stripEndQuotes()); // => test2
 console.log("'differentQuotes\" => " + "'differentQuotes\"".stripEndQuotes());
 
+// ================
 console.log("Some string".pad(20, "=")); // => ====Some string=====
 console.log("abc def".similarity("abc deg")); // => 85.71428571428571
 console.log("this is a test".camelCase()); // => This is a test

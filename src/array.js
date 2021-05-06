@@ -15,3 +15,11 @@ Array.prototype.flat = function (depth = 1) {
     );
   }, []);
 };
+
+Array.prototype.argStripQuotes = function () {
+  return this.map(
+    (el) =>
+      el.replace &&
+      el.replace(/"([^"]+(?="))"/g, "$1").replace(/'([^']+(?='))'/g, "$1")
+  );
+};
