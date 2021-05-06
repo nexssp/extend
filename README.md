@@ -2,13 +2,13 @@
 
 Some functions written/re-written and/or collected to make things easier in JavaScript and NodeJS.
 
-### NEW for Strings
-
-- **StripEndQuotes()** - "test1" => test2
-
 ### NEW for Strings and Arrays
 
 - **argStripQuotes()** - "test1" => test2 OR more advanced **'someadvanced="sd asd asd asd=,$$$=!"'** => someadvanced=sd asd asd asd=,$$$=!
+
+### NEW for Strings
+
+- **StripEndQuotes()** - "test1" => test2
 
 ## How to Start?
 
