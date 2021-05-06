@@ -1,7 +1,7 @@
 {
   "name": "@nexssp/extend",
   "description": "Extend some standard functionality of JavaScript: Arrays, Strings..",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://nexss.com",
   "main": "src/extend.js",
   "files": [
@@ -18,7 +18,15 @@
     "url": "https://nexss.com"
   },
   "keywords": [
-    "extend"
+    "extend",
+    "arguments",
+    "cli",
+    "strip",
+    "quotes",
+    "argv",
+    "flat",
+    "similarity",
+    "camelcase"
   ],
   "repository": {
     "type": "git",
