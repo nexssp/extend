@@ -38,5 +38,11 @@ String.prototype.stripEndQuotes = function () {
 // I have added striping of second char '
 String.prototype.argStripQuotes = function () {
   // " & '
-  return this.replace(/"([^"]+(?="))"/g, "$1").replace(/'([^']+(?='))'/g, "$1");
+  return (
+    (!el.startsWith("{") &&
+      !el.endsWith("{") &&
+      el.replace &&
+      el.replace(/"([^"]+(?="))"/g, "$1").replace(/'([^']+(?='))'/g, "$1")) ||
+    el
+  );
 };

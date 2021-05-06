@@ -11,7 +11,13 @@ console.log(
     'myparam2="test2"',
     'someadvanced="sd asd asd asd=,$$$=!"',
     '"Nexss Programmer"="test more adv"',
+    '{"x":1}',
   ].argStripQuotes()
+);
+
+// But not a JSON
+console.log(
+  ['{"x":1}', '{"name":"John", "age":31, "city":"New York"}'].argStripQuotes()
 );
 
 console.log('"test1" => ' + '"test2"'.stripEndQuotes()); // => test2
