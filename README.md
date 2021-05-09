@@ -8,6 +8,7 @@ Some functions written/re-written and/or collected to make things easier in Java
 
 ### NEW for Strings
 
+- **StripTerminalColors()** - removes terminal colors
 - **StripEndQuotes()** - "test1" => test2
 
 ## How to Start?
