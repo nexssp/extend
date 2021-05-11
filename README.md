@@ -2,6 +2,13 @@
 
 Some functions written/re-written and/or collected to make things easier in JavaScript and NodeJS.
 
+### New Object functions
+
+```js
+extend("object");
+{ key1: "val1", key2: "val2" }.invert() // { val1: 'key1', val2: 'key2' }
+```
+
 ### NEW for Strings and Arrays
 
 - **argStripQuotes()** - "test1" => test2 OR more advanced **'someadvanced="sd asd asd asd=,$$$=!"'** => someadvanced=sd asd asd asd=,$$$=!

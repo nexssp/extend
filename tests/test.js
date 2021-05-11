@@ -1,8 +1,10 @@
 const extend = require("../");
 
 extend(); // load all extensions
-extend("array", "string"); // load selected extension
+extend("array", "string", "object"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
+
+console.log({ key1: "val1", key2: "val2" }.invert());
 
 // New functions
 console.log(
