@@ -1,6 +1,58 @@
 # @nexssp/extend
 
-Some functions written/re-written and/or collected to make things easier in JavaScript and NodeJS.
+Some functions written/re-written and/or collected to make things easier in JavaScript/NodeJS.
+
+## How to Start?
+
+```js
+const extend = require("@nexssp/extend");
+
+extend(); // load all extensions
+extend("array", "string"); // load selected extension
+console.log(`All libs: `, extend.libs); // list available extensions: array, string
+
+// or just require("@nexssp/extend")("array")
+```
+
+## New YAML and JSON with function serialize!
+
+### Yaml
+
+```js
+extend("yaml");
+
+const yamlFromObject = {
+  x: 1,
+  y: 5,
+  nested: { x: 5, nested: { t: "test" } },
+}.YAMLstringify();
+
+console.log("YAMLfromObject:", yamlFromObject);
+
+// YAMLfromObject: x: 1
+// 'y': 5
+// nested:
+//   x: 5
+//   nested:
+//     t: test
+
+console.log("ObjectFromYaml", yamlFromObject.YAMLparse());
+// ObjectFromYaml { x: 1, y: 5, nested: { x: 5, nested: { t: 'test' } } }
+```
+
+### JSON
+
+```js
+extend("json");
+const x = {
+  x: 1,
+  y: function (e) {
+    console.log(`Hello! ${e}}`);
+  },
+}.JSONstringify(); // {"x":1,"y":"function (e) {\r\n    console.log(`Hello! ${e}}`);\r\n  }"}
+
+console.log(x.JSONparse()); // { x: 1, y: [Function (anonymous)] }
+```
 
 ### New Object functions
 
@@ -17,18 +69,6 @@ extend("object");
 
 - **StripTerminalColors()** - removes terminal colors
 - **StripEndQuotes()** - "test1" => test2
-
-## How to Start?
-
-```js
-const extend = require("@nexssp/extend");
-
-extend(); // load all extensions
-extend("array", "string"); // load selected extension
-console.log(`All libs: `, extend.libs); // list available extensions: array, string
-
-// or just require("@nexssp/extend")("array")
-```
 
 ## Usage
 

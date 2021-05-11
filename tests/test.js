@@ -1,8 +1,33 @@
 const extend = require("../");
 
 extend(); // load all extensions
-extend("array", "string", "object"); // load selected extension
+extend("array", "string", "object", "yaml", "json"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
+
+// JSON - enhanced by also storing the eg. functions
+
+const x = {
+  x: 1,
+  y: function (e) {
+    console.log(`Hello! ${e}}`);
+  },
+}.JSONstringify();
+console.log(x);
+
+// And back
+
+console.log(x.JSONparse());
+
+const yamlFromObject = {
+  x: 1,
+  y: 5,
+  nested: { x: 5, nested: { t: "test" } },
+}.YAMLstringify();
+
+// YAML
+console.log("YAMLfromObject:", yamlFromObject);
+
+console.log("ObjectFromYaml", yamlFromObject.YAMLparse());
 
 console.log({ key1: "val1", key2: "val2" }.invert());
 
