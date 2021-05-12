@@ -3,7 +3,12 @@ String.prototype.YAMLparse = function () {
   return load(this);
 };
 
-Object.prototype.YAMLstringify = function () {
-  const { dump } = require("js-yaml");
-  return dump(this);
-};
+Object.defineProperty(Object.prototype, "YAMLstringify", {
+  enumerable: false,
+  configurable: false,
+  writable: false,
+  value: function (pretty) {
+    const { dump } = require("js-yaml");
+    return dump(this);
+  },
+});
