@@ -14,7 +14,14 @@ console.log(`All libs: `, extend.libs); // list available extensions: array, str
 // or just require("@nexssp/extend")("array")
 ```
 
-## New YAML and JSON with function serialize!
+## New
+
+- **argvAddQuotes** - adds quotes to the parameters:
+
+`[ 'nexss','par1','par with space' ,'--x=a b c' ,"y='a c d'",'a b c' ]`.argvAddQuotes() ==>  
+`[ 'nexss','par1','"par with space"','--x="a b c"','y="a c d"','"a b c"']`
+
+## New YAML and JSON with 'function' serialize
 
 ### Yaml
 

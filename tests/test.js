@@ -4,8 +4,18 @@ extend(); // load all extensions
 extend("array", "string", "object", "yaml", "json"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
 
-// JSON - enhanced by also storing the eg. functions
+// argvAddQuotes
 
+const argv1 = [
+  "nexss",
+  "par1",
+  "par with space",
+  "--x=a b c",
+  "y='a c d'",
+  "a b c",
+];
+console.log(argv1, "==>", argv1.argvAddQuotes());
+// JSON - enhanced by also storing the eg. functions
 const x = {
   x: 1,
   y: function (e) {
