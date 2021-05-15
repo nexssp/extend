@@ -53,3 +53,17 @@ String.prototype.stripTerminalColors = function () {
     ""
   );
 };
+
+// const url = require("url"); url.parse is depracated
+String.prototype.parseURL = function (...args) {
+  let parsed;
+  try {
+    parsed = new URL(this, ...args);
+  } catch (e) {
+    parsed = {};
+    parsed.pathname = this + "";
+    parsed.path = this + "";
+    parsed.href = this + "";
+  }
+  return parsed;
+};

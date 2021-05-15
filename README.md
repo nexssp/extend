@@ -16,6 +16,8 @@ console.log(`All libs: `, extend.libs); // list available extensions: array, str
 
 ## New
 
+- **parseURL** - replacement for `url.parse is depracated` - There was a great function **url.parse** but it is depracated. `parseURL` is doing just that.
+
 - **argvAddQuotes** - adds quotes to the parameters:
 
 `[ 'nexss','par1','par with space' ,'--x=a b c' ,"y='a c d'",'a b c' ]`.argvAddQuotes() ==>  

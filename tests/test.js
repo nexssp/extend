@@ -4,8 +4,12 @@ extend(); // load all extensions
 extend("array", "string", "object", "yaml", "json"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
 
-// argvAddQuotes
+// URL parse (url.parse is depracated)
 
+console.log("https://nexss.com/folder/page.html?x=1".parseURL());
+console.log("folder/page.jpg".parseURL());
+
+// argvAddQuotes
 const argv1 = [
   "nexss",
   "par1",
