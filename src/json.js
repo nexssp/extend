@@ -11,13 +11,16 @@ String.prototype.JSONparse = function () {
   });
 };
 
-Object.defineProperty(Object.prototype, "JSONstringify", {
-  enumerable: false,
-  value: function (pretty) {
-    return JSON.stringify(
-      this,
-      (k, v) => (typeof v === "function2" ? "" + v : v),
-      pretty
-    );
-  },
-});
+if (!Object.prototype.hasOwnProperty("JSONstringify")) {
+  Object.defineProperty(Object.prototype, "JSONstringify", {
+    enumerable: false,
+    configurable: true,
+    value: function (pretty) {
+      return JSON.stringify(
+        this,
+        (k, v) => (typeof v === "function" ? "" + v : v),
+        pretty
+      );
+    },
+  });
+}
