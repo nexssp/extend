@@ -5,12 +5,13 @@ const extend = (...args) => {
     try {
       require(`./${lib}`);
     } catch (e) {
+      console.error("===> @nexssp/extend: ");
       console.error(
-        `===> @nexssp/extend: There was an issue with loading ${lib}. \nYou can only use ${libs.join(
+        `===> There was an issue with loading ${lib}. \nYou can only use ${libs.join(
           ", "
-        )}. eg. extend('array','string','object','yaml','json')`
+        )}. eg. extend('array','string')`
       );
-      console.error("Program has been terminated.");
+      console.error(e.stack);
       process.exit(1);
     }
   });

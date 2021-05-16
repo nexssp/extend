@@ -3,7 +3,6 @@ const extend = require("../");
 extend(); // load all extensions
 extend("array", "string", "object", "yaml", "json"); // load selected extension
 console.log(`All libs: `, extend.libs); // list available extensions
-
 // URL parse (url.parse is depracated)
 
 console.log("https://nexss.com/folder/page.html?x=1".parseURL());

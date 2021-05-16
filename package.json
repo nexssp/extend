@@ -1,16 +1,15 @@
 {
   "name": "@nexssp/extend",
   "description": "Extend some standard functionality of JavaScript: Arrays, Strings..",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "homepage": "https://nexss.com",
   "main": "src/extend.js",
   "files": [
     "src/**/*"
   ],
   "scripts": {
-    "prepare-later": "npm run nexss:build",
-    "nexss:build": "npx @nexssp/min@1.0.6",
-    "nexss:clean": ""
+    "test": "node tests/test.js",
+    "nexss:build": "npx @nexssp/min@1.0.6"
   },
   "author": {
     "name": "Marcin Polak",

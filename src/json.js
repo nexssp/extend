@@ -13,8 +13,6 @@ String.prototype.JSONparse = function () {
 
 Object.defineProperty(Object.prototype, "JSONstringify", {
   enumerable: false,
-  configurable: false,
-  writable: false,
   value: function (pretty) {
     return JSON.stringify(
       this,
