@@ -220,9 +220,22 @@
           "result": true,
           "testBody": "this works! and it is amazing! equal -> this works! and it is amazing!",
           "ok": true
+        },
+        {
+          "title": "string.template() aliast for string.interpolate()",
+          "type": "equal",
+          "params": [
+            "WOW works! and it is amazing!",
+            "WOW works! and it is amazing!"
+          ],
+          "file": "C:\\Users\\mapoart\\.nexss\\Future\\mypackages\\extend/tests/string.nexss-test.js",
+          "testType": "equal",
+          "result": true,
+          "testBody": "WOW works! and it is amazing! equal -> WOW works! and it is amazing!",
+          "ok": true
         }
       ],
-      "totalOk": 6,
+      "totalOk": 7,
       "totalFailed": 0
     }
   ],

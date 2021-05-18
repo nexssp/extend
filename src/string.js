@@ -1,10 +1,12 @@
 // Works like template!! "my ${somevar}".interpolate({somevar:1234})
-
-String.prototype.interpolate = function (params) {
+interpolate = function (params) {
   const names = Object.keys(params);
   const vals = Object.values(params);
   return new Function(...names, `return \`${this}\`;`)(...vals);
 };
+
+String.prototype.interpolate = interpolate;
+String.prototype.template = interpolate;
 
 String.prototype.similarity = function (b) {
   var equivalency = 0;

@@ -41,5 +41,16 @@ module.exports = {
         "this works! and it is amazing!",
       ],
     },
+    {
+      title: "string.template() aliast for string.interpolate()",
+      type: "equal",
+      params: [
+        "WOW ${myvar} and it is ${myvar2}".template({
+          myvar: "works!",
+          myvar2: "amazing!",
+        }),
+        "WOW works! and it is amazing!",
+      ],
+    },
   ],
 };

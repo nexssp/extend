@@ -97,7 +97,7 @@ extend("object");
 "Some string".pad(20, "="); // => ====Some string=====
 "abc def".similarity("abc deg"); // => 85.71428571428571
 "this is a test".camelCase(); // => This is a test
-"this ${myvar} and it is ${myvar2}".interpolate({
+"this ${myvar} and it is ${myvar2}".template({
   myvar: "works!",
   myvar2: "amazing!",
 }); // => this works! and it is amazing!
