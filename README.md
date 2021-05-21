@@ -14,6 +14,32 @@ console.log(`All libs: `, extend.libs); // list available extensions: array, str
 // or just require("@nexssp/extend")("array")
 ```
 
+## New Object.findByProp() and Object.deleteByProp()
+
+### Object.findByProp()
+
+```js
+{
+  commands: [
+    { name: "a1", "something else": "x" },
+    { name: "a2", "something else": "y" },
+  ],
+  key2: "val2",
+}.findByProp("commands", "name", "a2")
+```
+
+### Object.deleteByProp()
+
+```js
+{
+  commands: [
+    { name: "a1", "something else": "x" },
+    { name: "a2", "something else": "y" },
+  ],
+  key2: "val2",
+}.deleteByProp("commands", "name", "a1")
+```
+
 ## New
 
 - **parseURL** - replacement for `url.parse is depracated` - There was a great function **url.parse** but it is depracated. `parseURL` is doing just that.
