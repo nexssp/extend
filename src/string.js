@@ -1,3 +1,33 @@
+if (!String.prototype.hasOwnProperty("addTimestamp")) {
+  Object.defineProperty(String.prototype, "addTimestamp", {
+    enumerable: false,
+    configurable: true,
+    value: function () {
+      const timestamp = new Date().toJSON().replace(/:/g, ".");
+      if (this.indexOf(".") > -1) {
+        const splitted = this.split(".");
+        const filenameWoutExtension = splitted.slice(0, -1).join(".");
+        const extension = splitted.pop();
+        return `${filenameWoutExtension}_${timestamp}${
+          extension ? "." + extension : ""
+        }`;
+      } else {
+        return `${this}_${timestamp}`;
+      }
+    },
+  });
+}
+
+if (!String.prototype.hasOwnProperty("trimExtension")) {
+  Object.defineProperty(String.prototype, "trimExtension", {
+    enumerable: false,
+    configurable: true,
+    value: function () {
+      return this.split(".").slice(0, -1).join(".");
+    },
+  });
+}
+
 // Works like template!! "my ${somevar}".interpolate({somevar:1234})
 interpolate = function (params) {
   const names = Object.keys(params);

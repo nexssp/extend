@@ -3,6 +3,27 @@ require("../src/extend")(); // Load all just in case usage of all of them is ok.
 module.exports = {
   nexsstests: [
     {
+      title: "string.trimExtension",
+      type: "equal",
+      params: ["myimage.png".trimExtension(), /myimage/],
+    },
+    {
+      title: "string.addTimestamp",
+      type: "equal",
+      params: [
+        "mystring".addTimestamp(),
+        /mystring\_\d{4}-\d{2}-\d{2}T\d{2}\.\d{2}.*/,
+      ],
+    },
+    {
+      title: "string.addTimestamp",
+      type: "equal",
+      params: [
+        "myfile.png".addTimestamp(),
+        /myfile\_\d{4}-\d{2}-\d{2}T\d{2}\.\d{2}.*/,
+      ],
+    },
+    {
       title: "string.parseURL(url)",
       type: "equal",
       params: [

@@ -14,6 +14,14 @@ console.log(`All libs: `, extend.libs); // list available extensions: array, str
 // or just require("@nexssp/extend")("array")
 ```
 
+## New String.addTimestamp and String.trimExtension
+
+```js
+"mystring".addTimestamp(); //==> mystring_2021-05-21T08.34.33.064Z
+"myfile.png".addTimestamp(); //==> myfile_2021-05-21T08.35.35.058Z.png
+"myfile.png".trimExtension(); // ==> myfile
+```
+
 ## New Object.findByProp() and Object.deleteByProp()
 
 ### Object.findByProp()
