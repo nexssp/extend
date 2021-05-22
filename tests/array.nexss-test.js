@@ -33,7 +33,23 @@ module.exports = {
             "a b c",
           ].argvAddQuotes()
         ),
-        `["nexss","par1",""par with space"","--x="a b c"","y="a c d"",""a b c""]`,
+        process.platform === "win32"
+          ? JSON.stringify([
+              "nexss",
+              "par1",
+              '"par with space"',
+              '--x="a b c"',
+              'y="a c d"',
+              '"a b c"',
+            ])
+          : JSON.stringify([
+              "nexss",
+              "par1",
+              "'par with space'",
+              "--x='a b c'",
+              "y='a c d'",
+              "'a b c'",
+            ]),
       ],
     },
     {
@@ -49,7 +65,14 @@ module.exports = {
             '{"x":1}',
           ].argStripQuotes()
         ),
-        '["myparam1=test1","myparam2=test2","someadvanced=sd asd asd asd=,$$$=!","Nexss Programmer=test more adv","{"x":1}"]',
+
+        JSON.stringify([
+          "myparam1=test1",
+          "myparam2=test2",
+          "someadvanced=sd asd asd asd=,$$$=!",
+          "Nexss Programmer=test more adv",
+          '{"x":1}',
+        ]),
       ],
     },
   ],

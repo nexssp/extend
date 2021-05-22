@@ -60,7 +60,7 @@ if (!Array.prototype.hasOwnProperty("argvAddQuotes")) {
 
       return this.map((a) => {
         a = a.replace(
-          new RegExp(`=(${replace}?)(.*[^${replace}])(${replace}?)$`),
+          new RegExp(`=(?:("|')?)(.*[^(?:("|')])(?:("|')?)$`),
           `=${surround}$2${surround}`
         );
         if (!a.startsWith("-") && !a.endsWith(surround) && !/^\S+$/.test(a)) {
