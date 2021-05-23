@@ -5,7 +5,12 @@
   "homepage": "https://nexss.com",
   "main": "src/extend2.js",
   "files": [
-    "src/**/*"
+    "src/**/*",
+    "array.js",
+    "json.js",
+    "object.js",
+    "string.js",
+    "yaml.js"
   ],
   "scripts": {
     "test": "nexssp-test --debug",
