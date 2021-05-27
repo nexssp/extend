@@ -7,7 +7,7 @@ const {
   parseURL,
   similarity,
   pad,
-} = require('../string') // Load all just in case usage of all of them is ok.
+} = require('../') // Load all just in case usage of all of them is ok.
 
 module.exports = {
   nexsstests: [

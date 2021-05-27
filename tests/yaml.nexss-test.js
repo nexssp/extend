@@ -1,4 +1,4 @@
-const { YAMLstringify, YAMLparse } = require('../yaml') // Load all just in case usage of all of them is ok.
+const { YAMLstringify, YAMLparse } = require('../') // Load all just in case usage of all of them is ok.
 const x = YAMLstringify({
   x: 1,
   y: 'not a function Yaml not handling that',

@@ -1,4 +1,4 @@
-const { JSONstringify, JSONparse } = require('../json') // Load all just in case usage of all of them is ok.
+const { JSONstringify, JSONparse } = require('../') // Load all just in case usage of all of them is ok.
 const x = JSONstringify({
   x: 1,
   y: function (e) {

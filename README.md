@@ -9,6 +9,12 @@ Some functions written/re-written and/or collected to make things easier in Java
 const extend = require('@nexssp/extend/array')
 ```
 
+## New array function
+
+```js
+filterArray([1, 2, 3, 4], [2, 3]) // [1, 4]
+```
+
 ## New Object dot notation (no eval!)
 
 ```js

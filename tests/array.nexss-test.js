@@ -1,7 +1,23 @@
-const { remove, flat, arrArgvAddQuotes, arrArgStripQuotes } = require('../array')
+const { remove, flat, arrArgvAddQuotes, arrArgStripQuotes, filterArray } = require('../')
 
 module.exports = {
   nexsstests: [
+    {
+      type: 'equal',
+      title: '[].filterArray(arr)',
+      params: [filterArray([1, 2, 3, 4], [2, 3]), [1, 4]],
+    },
+    {
+      type: 'equal',
+      title: '[].filterArray(arr)',
+      params: [
+        filterArray(
+          ['my val1', 'my second val', 'and another val', 2, 5, 'works'],
+          ['my second val', 1, 2, 5]
+        ),
+        ['my val1', 'and another val', 'works'],
+      ],
+    },
     {
       type: 'equal',
       title: '[].remove(item)',

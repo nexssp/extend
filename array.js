@@ -40,3 +40,9 @@ exports.arrArgvAddQuotes = function argvAddQuotes(array, surround = '"') {
     return a
   })
 }
+
+exports.filterArray = function filterArray(array, filterArray) {
+  return array.filter(function (e) {
+    return this.indexOf(e) < 0
+  }, filterArray)
+}

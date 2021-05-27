@@ -1,4 +1,4 @@
-const { deleteByProp, dget, dset, invert, push, findByProp } = require('../object') // Load all just in case usage of all of them is ok.
+const { deleteByProp, dget, dset, invert, push, findByProp } = require('../') // Load all just in case usage of all of them is ok.
 
 module.exports = {
   nexsstests: [
