@@ -45,6 +45,8 @@ trimExtension('myfile.png') // ==> myfile
 
 ### Object.findByProp()
 
+Now also with regexp
+
 ```js
 findByProp(
   {
@@ -56,7 +58,7 @@ findByProp(
   },
   'commands',
   'name',
-  'a2'
+  'a2' // this can be also regexp from 2.0.3+: /^a2$/
 )
 ```
 

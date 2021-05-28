@@ -10,10 +10,22 @@ exports.invert = function invert(object) {
   return new_obj
 }
 
+// Takes 3 or 4 parameters (without location can search for array of objects )
 exports.findByProp = function findByProp(object, location, prop, value) {
-  return object[location]
-    ? object[location].find((e) => e[prop] && e[prop].indexOf(value) === 0)
-    : undefined
+  let search = object
+  if (arguments.length === 4) {
+    search = object[location]
+  } else {
+    value = prop
+    prop = location
+  }
+
+  let f = (e) => e[prop] && e[prop] === value
+  if (value instanceof RegExp) {
+    f = (e) => e[prop] && value.test(e[prop])
+  }
+
+  return search ? search.find && search.find(f) : undefined
 }
 
 exports.deleteByProp = function deleteByProp(object, location, prop, value) {
