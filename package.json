@@ -23,6 +23,11 @@
   },
   "keywords": [
     "extend",
+    "array",
+    "string",
+    "object",
+    "json",
+    "yaml",
     "arguments",
     "cli",
     "strip",

@@ -6,22 +6,44 @@ const x = JSONstringify({
   },
 })
 
+let separator = '\\n'
+if (process.platform === 'win32') {
+  separator = '\\r\\n'
+}
+
 module.exports = {
   notEval: true, // params won't be evaluated before begin.
   nexsstests: [
     {
       type: 'equal',
       title: 'Object.JSONstringify()',
-      params: [x, '{"x":1,"y":"function (e) {\\n    console.log(`Hello! ${e}}`)\\n  }"}'],
+      params: [
+        x,
+        '{"x":1,"y":"function (e) {' +
+          separator +
+          '    console.log(`Hello! ${e}}`)' +
+          separator +
+          '  }"}',
+      ],
     },
     {
       type: 'equal',
       title: 'Object.JSONparse()',
       params: [
         JSONstringify(
-          JSONparse('{"x":1,"y":"function (e) {\\n    console.log(`Hello! ${e}}`)\\n  }"}')
+          JSONparse(
+            '{"x":1,"y":"function (e) {' +
+              separator +
+              '    console.log(`Hello! ${e}}`)' +
+              separator +
+              '  }"}'
+          )
         ),
-        '{"x":1,"y":"function (e) {\\n    console.log(`Hello! ${e}}`)\\n  }"}',
+        '{"x":1,"y":"function (e) {' +
+          separator +
+          '    console.log(`Hello! ${e}}`)' +
+          separator +
+          '  }"}',
       ],
     },
   ],

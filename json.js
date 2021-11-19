@@ -2,7 +2,11 @@ exports.JSONparse = function JSONparse(str) {
   return JSON.parse(str, function (k, v) {
     if (
       typeof v === 'string' &&
-      (v.startsWith('function (') || v.startsWith('function(')) &&
+      (v.startsWith('function (') ||
+        v.startsWith('function(') ||
+        v.includes('() {') ||
+        v.includes('(){') ||
+        (v.trim().startsWith('(') && v.trim().endsWith('}'))) &&
       v.endsWith('}')
     ) {
       return eval('(' + v + ')')
