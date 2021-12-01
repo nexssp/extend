@@ -33,9 +33,17 @@ exports.arrArgvAddQuotes = function argvAddQuotes(array, surround = '"') {
   }
 
   return array.map((a) => {
-    a = a.replace(new RegExp(`=(?:("|')?)(.*[^(?:("|')])(?:("|')?)$`), `=${surround}$2${surround}`)
-    if (!a.startsWith('-') && !a.endsWith(surround) && !/^\S+$/.test(a)) {
-      a = `${surround}${a}${surround}`
+    a = a.replace(
+      new RegExp(`=(?:("|')?)(.*[^(?:("|')])(?:("|')?)$`),
+      `=${!a.startsWith(surround) ? surround : ''}$2${!a.endsWith(surround) ? surround : ''}`
+    )
+    if (
+      /^(?!("|')).*[<>]/.test(a) ||
+      (!a.startsWith('-') && !a.endsWith('"') && !/^\S+$/.test(a))
+    ) {
+      a = `${!a.startsWith('"') && !a.startsWith("'") ? surround : ''}${a}${
+        !a.endsWith(surround) ? surround : ''
+      }`
     }
     return a
   })

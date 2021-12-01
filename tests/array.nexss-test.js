@@ -43,6 +43,24 @@ module.exports = {
     },
     {
       type: 'equal',
+      title: '[].arrArgvAddQuotes() Special characters - < >',
+      params: [
+        arrArgvAddQuotes([
+          'nexss',
+          '<',
+          '11>',
+          '"<"',
+          '<<',
+          '<body>',
+          '<p><a href="#">test</a></p>',
+        ]),
+        process.platform === 'win32'
+          ? ['nexss', '"<"', '"11>"', '"<"', '"<<"', '"<body>"', '"<p><a href="#">test</a></p>"']
+          : ['nexss', "'<'", "'11>'", "'<'", "'<<'", "'<body>'", "'<p><a href='#'>test</a></p>'"],
+      ],
+    },
+    {
+      type: 'equal',
       title: '[].argStripQuotes()',
       params: [
         arrArgStripQuotes([
