@@ -35,10 +35,34 @@ module.exports = {
       type: 'equal',
       title: '[].arrArgvAddQuotes()',
       params: [
-        arrArgvAddQuotes(['nexss', 'par1', 'par with space', '--x=a b c', "y='a c d'", 'a b c']),
+        arrArgvAddQuotes([
+          'nexss',
+          'par1',
+          'par with space',
+          '--x=a b c',
+          "y='a c d'",
+          'a b c',
+          '--abc=CDDDD',
+        ]),
         process.platform === 'win32'
-          ? ['nexss', 'par1', '"par with space"', '--x="a b c"', 'y="a c d"', '"a b c"']
-          : ['nexss', 'par1', "'par with space'", "--x='a b c'", "y='a c d'", "'a b c'"],
+          ? [
+              'nexss',
+              'par1',
+              '"par with space"',
+              '--x="a b c"',
+              'y="a c d"',
+              '"a b c"',
+              '--abc="CDDDD"',
+            ]
+          : [
+              'nexss',
+              'par1',
+              "'par with space'",
+              "--x='a b c'",
+              "y='a c d'",
+              "'a b c'",
+              "--abc='CDDDD'",
+            ],
       ],
     },
     {

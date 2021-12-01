@@ -60,6 +60,6 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "@nexssp/test": "^1.0.30"
+    "@nexssp/test": "^1.1.7"
   }
 }
