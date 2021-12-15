@@ -51,3 +51,7 @@ exports.filterArray = function filterArray(array, filterArray) {
     return this.indexOf(e) < 0
   }, filterArray)
 }
+
+exports.range = function range(s, e) {
+  return Array.from('x'.repeat(++e - s), (_, i) => s + i)
+}

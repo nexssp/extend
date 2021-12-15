@@ -1,6 +1,13 @@
 const libs = ['array', 'string', 'object', 'yaml', 'json']
 
-const { remove, flat, arrArgStripQuotes, arrArgvAddQuotes, filterArray } = require('../array')
+const {
+  remove,
+  flat,
+  arrArgStripQuotes,
+  arrArgvAddQuotes,
+  filterArray,
+  range,
+} = require('../array')
 const { invert, deleteByProp, findByProp, dget, dset, push } = require('../object')
 const {
   addTimestamp,
@@ -24,6 +31,7 @@ module.exports = {
   arrArgStripQuotes,
   arrArgvAddQuotes,
   filterArray,
+  range,
   //Object
   invert,
   deleteByProp,

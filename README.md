@@ -9,7 +9,13 @@ Some functions written/re-written and/or collected to make things easier in Java
 const extend = require('@nexssp/extend/array')
 ```
 
-## New array function
+## New range function
+
+```js
+range(0, 63) // produces [0, 1, 2, 3......62, 63 ] (note 63 includes!)
+```
+
+## filterArray
 
 ```js
 filterArray([1, 2, 3, 4], [2, 3]) // [1, 4]
