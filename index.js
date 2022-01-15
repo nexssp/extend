@@ -1,14 +1,7 @@
 const libs = ['array', 'string', 'object', 'yaml', 'json']
 
-const {
-  remove,
-  flat,
-  arrArgStripQuotes,
-  arrArgvAddQuotes,
-  filterArray,
-  range,
-} = require('../array')
-const { invert, deleteByProp, findByProp, dget, dset, push } = require('../object')
+const { remove, flat, arrArgStripQuotes, arrArgvAddQuotes, filterArray, range } = require('./array')
+const { invert, deleteByProp, findByProp, dget, dset, push } = require('./object')
 const {
   addTimestamp,
   camelCase,
@@ -20,9 +13,9 @@ const {
   stripEndQuotes,
   trimExtension,
   similarity,
-} = require('../string')
-const { JSONparse, JSONstringify } = require('../json')
-const { YAMLparse, YAMLstringify } = require('../yaml')
+} = require('./string')
+const { JSONparse, JSONstringify } = require('./json')
+const { YAMLparse, YAMLstringify } = require('./yaml')
 
 module.exports = {
   // Array

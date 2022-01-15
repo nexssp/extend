@@ -5,7 +5,7 @@ const {
   arrArgStripQuotes,
   filterArray,
   range,
-} = require('../src/extend2')
+} = require('../array')
 
 module.exports = {
   nexsstests: [

@@ -3,13 +3,26 @@
   "description": "Extend some standard functionality of JavaScript: Arrays, Strings..",
   "version": "2.0.8",
   "homepage": "https://nexss.com",
-  "main": "src/extend2.js",
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./index.mjs",
+        "require": "./index.js"
+      }
+    },
+    "./array": "./array.js",
+    "./object": "./object.js",
+    "./string": "./string.js",
+    "./json": "./json.js",
+    "./yaml": "./yaml.js"
+  },
   "files": [
-    "src/**/*",
+    "index.js",
+    "index.mjs",
     "array.js",
-    "json.js",
     "object.js",
     "string.js",
+    "json.js",
     "yaml.js"
   ],
   "scripts": {

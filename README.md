@@ -1,5 +1,15 @@
 # @nexssp/extend
 
+**15.01.2022 Upgrade** - Now works also with `import` as module.
+
+```js
+const array = require('@nexssp/extend/array')
+console.log(Object.keys(array)) // see all available functions for array
+
+// or
+import { remove, flat, range } from '@nexssp/extend/array'
+```
+
 Some functions written/re-written and/or collected to make things easier in JavaScript/NodeJS.
 
 ## How to Start?

@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { deleteByProp, dget, dset, invert, push, findByProp } = require('../src/extend2') // Load all just in case usage of all of them is ok.
+const { deleteByProp, dget, dset, invert, push, findByProp } = require('../index.js') // Load all just in case usage of all of them is ok.
 
 const threeParameters = findByProp(
   [

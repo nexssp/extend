@@ -1,0 +1,11 @@
+const array = require('@nexssp/extend/array')
+const object = require('@nexssp/extend/object')
+const string = require('@nexssp/extend/string')
+const json = require('@nexssp/extend/json')
+const yaml = require('@nexssp/extend/yaml')
+
+console.log(array)
+console.log(object)
+console.log(string)
+console.log(json)
+console.log(yaml)
